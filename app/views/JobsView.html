@@ -1,0 +1,39 @@
+<div class="container-fluid">
+    <div class="row text-center bg-white py-3">
+        <h1>Get a job I dare you you wont</h1>
+    </div>
+
+    <div id="job-form" class="d-none row my-5 justify-content-center">
+        <div class="col-6">
+            <form onsubmit="app.JobsController.createJob()" class="row mx-5 bg-white p-4 shadow border border-3">
+                <div class="col-6 py-2">
+                    <label for="">Company</label>
+                    <input class="form-control" type="text" name="company" id="" required>
+                </div>
+                <div class="col-6 py-2">
+                    <label for="">Title</label>
+                    <input class="form-control" type="text" name="jobTitle" id="" required>
+                </div>
+                <div class="col-6 py-2">
+                    <label for="">Hours</label>
+                    <input class="form-control" type="number" min="0" max="40" name="hours" id="" required>
+                </div>
+                <div class="col-6 py-2">
+                    <label for="">Rate</label>
+                    <input class="form-control" type="number" name="rate" id="" required>
+                </div>
+                <div class="col-12 py-2">
+                    <label for="">Description</label>
+                    <textarea class="form-control" name="description" id="" required></textarea>
+                </div>
+                <div class="col-12 text-center pt-3">
+                    <button class="btn btn-primary">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="row px-5" id="jobs-container">
+
+    </div>
+</div>
