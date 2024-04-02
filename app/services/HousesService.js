@@ -10,17 +10,6 @@ class HousesService {
     async getHouses() {
         const response = await api.get('https://sandbox.codeworksacademy.com/api/houses')
         AppState.houses = response.data.map(x => new House(x))
-        /*AppState.houses.push(new House({
-            bedrooms: 1,
-            bathrooms: 1,
-            year: 2001,
-            price: 10,
-            levels: 3,
-            imgUrl: `x" onerror="console.log('run'); let x = document.createElement('marquee'); x.innerHTML='Ivana B Coding > You (XSS MOMENT?!?)'; x.setAttribute('style', 'z-index: 10; position: absolute;'); x.classList.add('bg-danger', 'fs-3', 'text-light'); document.body.appendChild(x)">`,
-            creatorId: '3',
-            creator: { name: 'yeahh', picture: 'https://google.com/' },
-            description: ">"
-        }))*/
     }
 
     async createHouse(data) {
